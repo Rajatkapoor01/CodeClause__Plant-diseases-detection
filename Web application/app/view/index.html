@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Plant Disease Detector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web application for detecting plant diseases from images">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Abril+Fatface&display=swap">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="../static/leaf.png" type="image/x-icon">
+
+<body>
+
+				 <path
+					d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+					fill="currentColor" class="octo-body"></path>
+			</svg>
+		</a>
+	</div>
+	<div class="container"><img src="../static/bgd.jpg" id="right"></div>
+	<!-- <div class="wrapper"> -->
+	<div class="heading">
+		PLANT DISEASE DETECTOR</div>
+	<div class="text">
+		<p><b>Share a picture of the plant and get immediate results!</b></p>
+	</div>
+	<!-- </div> -->
+	<div class="inner">
+		<form id="analysis-form" enctype="multipart/form-data">
+			<div class="imgbox"><img src="../static/img.png" class="img" id="selected_image">
+				<div class="middle">
+					<div class="add"><span>SELECT IMAGE</span></div>
+					<input name="Select File" id="imagefile" type="file" />
+				</div>
+			</div>
+			<button id="analyze-button" class="analyze-button">
+				<span>Analyze</span>
+			</button>
+		</form>
+		<div id="result"><b>Result : </b></div>
+	</div>
+	<div >
+		<img src="../static/left.png" class="left">
+	</div>
+
+	<div>
+		<table class="styled-table">
+			<thead>
+				<tr>
+					<th colspan="2" style="font-size: 1.85em;  border-bottom: 2px solid #dddddd;">Supported Diseases</th>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<th>Class Names</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Apple</td>
+				<td>'Apple scab','Apple Black rot', 'Apple Cedar apple rust', 'Apple healthy'</td>
+				</tr>
+				<tr>
+					<td>Blueberry</td>
+				<td>'Blueberry healthy'</td>
+				</tr>
+				<tr>
+					<td>Cherry</td>
+				<td>'Cherry (including sour)Powdery mildew', 'Cherry(including sour) healthy'</td>
+				</tr>
+				<tr>
+					<td>Corn</td>
+				<td>'Corn Cercospora leaf spot', 'Corn Common rust', 'Corn Northern Leaf Blight', 'Corn healthy'</td>
+				</tr>
+				<tr>
+					<td>Grape</td>
+				<td>'Grape Black rot', 'Grape Esca (Black Measles)', 'Leaf blight (Isariopsis Leaf Spot)', 'Grape healthy'</td>
+				</tr>
+				<tr>
+					<td>Orange</td>
+				<td>'Orange Haunglongbing (Citrus greening)'</td>
+				</tr>
+				<tr>
+					<td>Peach</td>
+				<td>'Peach Bacterial spot', 'Peach healthy'</td>
+				</tr>
+				<tr>
+					<td>Pepper</td>
+				<td>'Pepper, bell Bacterial spot', 'Pepper bell healthy'</td>
+				</tr>
+				<tr>
+					<td>Potato</td>
+				<td>'Potato Early blight', 'Potato Late blight', 'Potato healthy'</td>
+				</tr>
+				<tr>
+					<td>Raspberry</td>
+				<td>'Raspberry healthy'</td>
+				</tr>
+				<tr>
+					<td>Soyabean</td>
+				<td>'Soybean healthy'</td>
+				</tr>
+				<tr>
+					<td>Squash</td>
+				<td>'Squash Powdery mildew'</td>
+				</tr>
+				<tr>
+					<td>Strawberry</td>
+				<td>'Strawberry Leaf scorch', 'Strawberry healthy'</td>
+				</tr>
+				<tr>
+					<td>Tomato</td>
+				<td>Tomato: 'Bacterial spot', 'Earlyblight', 'Late blight', 'Leaf Mold', 'Septoria leaf spot', 'Spider mites', 'Target Spot', 'Yellow Leaf Curl Virus', 'Mosaic virus', 'Healthy'</td>
+				</tr>
+				<!-- and so on... -->
+			</tbody>
+		</table>
+	</div>
+	<script src="../static/client.js"></script>
+</body>
+
+</html>
