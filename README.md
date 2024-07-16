@@ -23,9 +23,9 @@ sudo docker build -t pdd .
 sudo docker images --filter reference=pdd
 sudo docker run -t -i -p 8080:8080 pdd
 ```
-![EXECUCATION SCREENSHOT]()
+![EXECUCATION SCREENSHOT](https://github.com/Rajatkapoor01/CodeClause__Plant-diseases-detection/blob/main/SS_PLANT.png)
 
-![EXECUCATION VIDEO]()
+![EXECUCATION VIDEO](https://github.com/Rajatkapoor01/CodeClause__Plant-diseases-detection/blob/main/Eecution%20video.gif)
 
 
 
